@@ -23,7 +23,8 @@ model = cached_model()
 df = get_dataset()
 
 st.header('AI 챗봇')
-st.markdown("미완성(적절한 답이 나오지 않을 수도 있습니다)")
+st.markdown("미완성(1세대라 응답이 반복될 가능성이 높습니다)")
+st.markdown("이렇게 짧은 시간 안에 학습을 시키긴 어려워요")
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
