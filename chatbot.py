@@ -23,7 +23,6 @@ model = cached_model()
 df = get_dataset()
 
 st.header('AI 챗봇')
-st.markdown("미완성(1세대라 응답이 반복될 가능성이 높습니다)")
 st.markdown("이렇게 짧은 시간 안에 학습을 시키긴 어려워요")
 st.markdown("심리 상담 정도만 가능하게 구현하였습니다")
 
