@@ -22,8 +22,8 @@ def get_dataset():
 model = cached_model()
 df = get_dataset()
 
-st.header('엉뚱한 AI 심리상담 챗봇')
-st.markdown("[❤️학생 만족도 조사 링크](https://docs.google.com/forms/d/e/1FAIpQLScmBZl3Iy-otn5GocwWD4fEBRyNrUYftJnjt8PGGI5LBUMVyg/viewform?usp=sf_link)")
+st.header('AI 챗봇')
+st.markdown("미완성(적절한 답이 나오지 않을 수도 있습니다)")
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
