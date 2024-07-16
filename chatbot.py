@@ -45,7 +45,7 @@ if submitted and user_input:
     try:
         embedding = model.encode(user_input)
 
-        df['distance'] = df['embedding'].map(lambda x: cosine_similarity([embedding], [x]).squeeze())
+        df['distance'] = df['embedding'].map(lambda x: cosine_similarity([embedding], [x]).squeeze())#신재희 개새끼
         answer = df.loc[df['distance'].idxmax()]
 
         st.session_state.past.append(user_input)
