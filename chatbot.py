@@ -24,7 +24,7 @@ df = get_dataset()
 
 st.title('AI 챗봇')
 st.markdown("이렇게 짧은 시간 안에 학습을 시키긴 어려워요(한마디로 멍청해요)")
-st.title("심리 상담 정도만 가능하게 구현하였습니다")
+st.markdown("심리 상담 정도만 가능하게 구현하였습니다")
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
