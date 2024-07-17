@@ -23,9 +23,8 @@ model = cached_model()
 df = get_dataset()
 
 st.title('AI 챗봇')
-st.header("제발 이상한 질문좀 하지 마세요")
 st.markdown("이렇게 짧은 시간 안에 학습을 시키긴 어려워요(한마디로 멍청해요)")
-st.markdown("심리 상담 정도만 가능하게 구현하였습니다")
+st.title("심리 상담 정도만 가능하게 구현하였습니다")
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
@@ -45,7 +44,7 @@ if submitted and user_input:
     try:
         embedding = model.encode(user_input)
 
-        df['distance'] = df['embedding'].map(lambda x: cosine_similarity([embedding], [x]).squeeze())#신재희 개새끼
+        df['distance'] = df['embedding'].map(lambda x: cosine_similarity([embedding], [x]).squeeze())
         answer = df.loc[df['distance'].idxmax()]
 
         st.session_state.past.append(user_input)
